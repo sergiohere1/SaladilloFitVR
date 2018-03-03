@@ -1,5 +1,5 @@
 ﻿///////////////////////////////////////////
-// Práctica: SaladilloVR
+// Práctica: SaladilloFitVR
 // Alumno/a: Sergio García-Consuegra Berná
 // Curso: 2017/2018
 // Fichero: ButtonGazeClick.cs

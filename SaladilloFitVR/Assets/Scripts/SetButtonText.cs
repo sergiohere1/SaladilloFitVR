@@ -1,5 +1,5 @@
 ﻿///////////////////////////////////////////
-// Práctica: SaladilloVR
+// Práctica: SaladilloFitVR
 // Alumno/a: Sergio García-Consuegra Berná
 // Curso: 2017/2018
 // Fichero: SetButtonText.cs
@@ -13,7 +13,7 @@ public class SetButtonText : MonoBehaviour
 {
 
 	public string text;
-	public Text ipAdress;
+	public Text shownText;
 
 	// Use this for initialization
 	void Start ()
@@ -28,6 +28,6 @@ public class SetButtonText : MonoBehaviour
 
 	public void Click()
 	{
-		ipAdress.text += text;
+		shownText.text += text;
 	}
 }

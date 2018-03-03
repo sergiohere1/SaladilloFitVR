@@ -1,5 +1,5 @@
 ﻿///////////////////////////////////////////
-// Práctica: SaladilloVR
+// Práctica: SaladilloFitVR
 // Alumno/a: Sergio García-Consuegra Berná
 // Curso: 2017/2018
 // Fichero: SaveScript.cs
@@ -26,15 +26,11 @@ public class SaveScript : MonoBehaviour
 	/// Objeto con la dirección IP introducida por el usuario
 	/// </summary>
 	public Text ipAdress;
-	// Use this for initialization
-	void Start () {
-		
-	}
+	/// <summary>
+	/// El panel del cliente que aparecerá en caso de que nos conectemos correctamente a la API
+	/// </summary>
+	public GameObject clientPanel;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	/// <summary>
 	/// Método que se ejecuta cuando se pulsa el botón save
@@ -79,6 +75,8 @@ public class SaveScript : MonoBehaviour
 			// en caso contrario.
 			connected.SetActive(www.responseCode == 200);
 			disconnected.SetActive(!connected.activeSelf);
+			// Aplicamos el estado de activo o no al ClientPanel según la respuesta
+			clientPanel.SetActive(www.responseCode == 200);
 		}
 	}
 
